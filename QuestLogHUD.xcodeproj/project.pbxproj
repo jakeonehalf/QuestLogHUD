@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		32CD745D2DE18E8A00977CFA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 32CD745C2DE18E8600977CFA /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		321CF6FF2DE02BDF006D0FB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		321CF6ED2DE02BDE006D0FB9 /* QuestLogHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestLogHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		321CF6FE2DE02BDF006D0FB9 /* QuestLogHUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestLogHUDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		321CF7082DE02BDF006D0FB9 /* QuestLogHUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestLogHUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32CD745C2DE18E8600977CFA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +80,7 @@
 		321CF6E42DE02BDE006D0FB9 = {
 			isa = PBXGroup;
 			children = (
+				32CD745C2DE18E8600977CFA /* README.md */,
 				321CF6EF2DE02BDE006D0FB9 /* QuestLogHUD */,
 				321CF7012DE02BDF006D0FB9 /* QuestLogHUDTests */,
 				321CF70B2DE02BDF006D0FB9 /* QuestLogHUDUITests */,
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32CD745D2DE18E8A00977CFA /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
