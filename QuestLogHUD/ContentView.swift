@@ -18,27 +18,19 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .padding(.bottom)
 
-            HStack {
-                TextField("New quest...", text: $newQuestTitle)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(minWidth: 300)
+            NewQuestView(newQuestTitle: $newQuestTitle) { title in
+                let newQuest = Quest(
+                    id: UUID(),
+                    title: title,
+                    status: .active,
+                    tags: [],
+                    notes: nil,
+                    createdAt: Date(),
+                    updatedAt: Date()
+                )
 
-                Button("Add") {
-                    let newQuest = Quest(
-                        id: UUID(),
-                        title: newQuestTitle,
-                        status: .active,
-                        tags: [],
-                        notes: nil,
-                        createdAt: Date(),
-                        updatedAt: Date()
-                    )
-
-                    questStore.quests.append(newQuest)
-                    questStore.save()
-                    newQuestTitle = ""
-                }
-                .disabled(newQuestTitle.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                questStore.quests.append(newQuest)
+                questStore.save()
             }
             .padding(.bottom)
 
