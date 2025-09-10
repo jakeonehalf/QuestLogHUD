@@ -16,11 +16,19 @@ struct QuestLogHUDApp: App {
                 .background(WindowAccessor { window in
                     if let window = window {
                         window.title = "Quest Log"
-                        window.level = .floating
+                        window.level = .popUpMenu
                         window.setFrameAutosaveName("QuestLogHUDWindow")
-                        window.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
+                        window.collectionBehavior = [
+                            .canJoinAllSpaces,
+                            .stationary,
+                            .ignoresCycle,
+                            .fullScreenAuxiliary
+                        ]
+                        window.hidesOnDeactivate = false
                         window.isReleasedWhenClosed = false
+                        window.setFrame(window.frame, display: true, animate: false)
                         window.makeKeyAndOrderFront(nil)
+                        window.orderFrontRegardless()
                         NSApp.activate(ignoringOtherApps: true)
                     }
                 })
